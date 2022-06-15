@@ -3,15 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const bodyParser = require("body-parser");
+const connect = require('./models/connect')
 
 
 // Importing Routers
-var indexRouter = require('./routes/index');
-
-
+var indexRouter = require('./routes/indexRouter');
+var loginRouter = require('./routes/loginRouter');
+var signupRouter = require('./routes/signupRouter')
 
 var app = express();
 
+
+// Connecting to mongodb
+connect()
 
 
 // view engine setup
@@ -24,7 +29,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+//Using body parser
+app.use(bodyParser.urlencoded({extended:true}));
 
 
 
@@ -32,8 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 
-
-
+app.use('/', loginRouter);
+app.use('/', signupRouter);
 
 
 // catch 404 and forward to error handler
