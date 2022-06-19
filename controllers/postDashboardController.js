@@ -9,8 +9,7 @@ const postDashboardController = (req, res)=>{
     const demonName = req.body.name;
     client.publish("cubex/cubex" + cubex1 && "cubex/cubex" + cubex2 , "enable demon")
    
-
-    res.send("Demon enabled");
+    res.render('demon')
     
 }    
 
