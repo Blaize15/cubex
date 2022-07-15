@@ -1,0 +1,81 @@
+body,html{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    /* background-color: #0270D7; */
+    /* background-color: #242830; */
+    /* background-color: #1D2026; */
+    /* background-color: #8A94A7; */
+    /* background-color: whitesmoke; */
+}
+a{
+    text-decoration: none !important;
+}
+.cont{
+    display: flex;
+    align-items:center;
+    height: 100vh;
+    width:100vw;
+    background-color: #242830;
+    clip-path: polygon(0% 0%,100% 0%,100% 60%,0% 100%);
+}
+.cont2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+    overflow: hidden;
+    background-size: cover;
+}
+.signupcard{
+    display: grid;
+    grid-template-rows: 15% auto 10%;
+    height:65vh;
+    width:40vw;
+    min-height: 500px;
+    min-width: 350px;
+    background-color: #fff;
+    padding:1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.logincard{
+    display: grid;
+    grid-template-rows: 38% auto 15%;
+    height:60vh;
+    width:35vw;
+    min-height: 450px;
+    min-width: 350px;
+    background-image: linear-gradient(to bottom,#7579ff, #b224ef);
+    padding:1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.land-grid{
+    display: grid;
+    height:200px;
+    grid-template-rows: 20% 35% 25% auto;
+    z-index: 1;
+}
+.feature-card{
+    display: grid;
+    text-align: center;
+    color: white;
+    min-height:300px;
+    grid-template-rows: 40% 15% auto;
+}
+.land-img{
+    position: absolute;
+    right:0%;
+    top:0%;
+}
+#form-message-success{
+    display:none;
+}
+@media screen and (max-width:400px) {
+    .land-grid{
+        text-align: center;
+        transform: translateY(-20vh);
+    }
+}
