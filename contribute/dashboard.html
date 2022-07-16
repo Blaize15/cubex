@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubex</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="cont2 bg-dark text-white">
+        <div class="signupcard" style="grid-template-rows:25% auto;background:none;" data-aos="fade-down" data-aos-duration="1500">
+            <div>
+                <h1>Create Demon</h1>
+                <span id="form-message-success" class="m-2 w-100">
+                    <b>Your message was sent, thank you!</b>
+                </span>
+            </div>
+            <form method="POST" action="/dashboard">
+                <p><input type="text" class="form-control form-control-lg" name="cubex1" placeholder="Cubex ID 1" required></p>
+                <p><input type="text" class="form-control form-control-lg" name="cubex2" placeholder="Cubex ID 2" required></p>
+                <p><button type="submit" class="btn btn-primary w-100"><b>CREATE</b></button></p>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/2939ec19a4.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>
